@@ -2,17 +2,13 @@
 
 namespace TicTac705\guessnumber\Controller;
 
-use function TicTac705\guessnumber\View\showGame;
-use function TicTac705\guessnumber\View\setting;
-use function TicTac705\guessnumber\View\greeting;
-use function TicTac705\guessnumber\View\endGame;
-use function TicTac705\guessnumber\View\replayGame;
+use function TicTac705\guessnumber\Model\setting;
+use function TicTac705\guessnumber\View\MenuGame;
+use function TicTac705\guessnumber\DataBase\openDatabase;
 
 function startGame()
 {
     setting();
-    greeting();
-    showGame();
+    openDatabase();
+    MenuGame();
 }
-
-?>
