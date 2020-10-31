@@ -2,6 +2,7 @@
 
 namespace TicTac705\guessnumber\Model;
 
+use function cli\prompt;
 use function TicTac705\guessnumber\View\greeting;
 use function TicTac705\guessnumber\View\endGame;
 use function TicTac705\guessnumber\View\MenuGame;
@@ -16,6 +17,7 @@ function setting()
 {
     define("MAX_NUM", 8);
     define("NUM_ATTEMPT", 4);
+    define('DB_NAME', 'gamedb.db');
 }
 
 function showGame($user_name)
@@ -112,6 +114,6 @@ function commandHandler($getCommand)
             exit;
         }
 
-        $getCommand = \cli\prompt("Введите ключ");
+        $getCommand = prompt("Введите ключ");
     }
 }
